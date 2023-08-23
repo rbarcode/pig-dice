@@ -9,6 +9,10 @@ Player.prototype.calcCurrentScore = function(currentRollValue) {
   return this.currentScore;
 }
 
+Player.prototype.calcTotalScore = function() {
+  this.totalScore += this.currentScore;
+  return this.totalScore;
+}
 
 function Game(player1, player2) {
   this.players = [player1 = new Player(player1), player2 = new Player(player2)];
@@ -24,3 +28,7 @@ Game.prototype.dieRoll = function () {
   return this.currentRollValue;
   
 }
+
+// Game.prototype.hold = function () {
+//   this.activePlayer.calcTotalScore();
+// }
