@@ -4,15 +4,15 @@ function Player() {
   this.isTurn = false;
 }
 
-Player.prototype.calcCurrentScore = function (currentRollValue) {
-  if (currentRollValue === 1) {
-    this.currentScore = 0;
-    // add in changeTurn(); here. Figure out syntax
-  } else {
-    this.currentScore += currentRollValue;
-  }
-  return this.currentScore;
-}
+// Player.prototype.calcCurrentScore = function (currentRollValue) {
+//   if (currentRollValue === 1) {
+//     this.currentScore = 0;
+//     Game.changeTurn();
+//   } else {
+//     this.currentScore += currentRollValue;
+//   }
+//   return this.currentScore;
+// }
 
 Player.prototype.calcTotalScore = function () {
   this.totalScore += this.currentScore;
@@ -29,20 +29,26 @@ function Game(player1, player2) {
 
 Game.prototype.dieRoll = function () {
   this.currentRollValue = Math.floor(Math.random() * 6) + 1;
-  this.activePlayer.calcCurrentScore(this.currentRollValue);
+  // this.activePlayer.calcCurrentScore(this.currentRollValue);
+  // return this.currentRollValue;
+  if (this.currentRollValue === 1) {
+    this.currentScore = 0;
+    this.changeTurn();
+  } else {
+    currentScore += this.currentRollValue; //fix this and get it to connect to player
+  }
   return this.currentRollValue;
-
 }
 
 Game.prototype.changeTurn = function () {
-  //Pick up here to finish changeTurn syntax...
-  if (activePlayer === players[0]) {
-    activePlayer = players[1]
-  } else
-    activePlayer = player[0]
 
+  if (this.activePlayer === this.players[0]) {
+    this.activePlayer = this.players[1]
+  } else {
+    this.activePlayer = this.players[0]
+  }
   this.players.forEach(function (player) {
-    player.isTurn = !player.isTurn
+    player.isTurn = !player.isTurn //should only have one true... it changing both to true.
   });
 
 }

@@ -117,3 +117,5 @@ Seth Rolls:
   newGame.players[0].currentScore;
   newGame.players[0].calcTotalScore();
   newGame.players[0].totalScore;
+
+  newGame.changeTurn();
