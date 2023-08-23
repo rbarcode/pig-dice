@@ -18,3 +18,8 @@ Describe: Game.prototype.dieRoll()
 Test #4 : "It should return a random number between 1 and 6."
 Code: game.protopype.die();
 Expected Outcome: /some random number between 1 and 6/
+
+Describe: Players.prototype.calcCurrentScore();
+Test #5 : "It should add the randomly generated number to the player's currentscore."
+Code: activePlayer.calcCurrentScore();
+Expected Outcome: /0 + the randomly generated number/
