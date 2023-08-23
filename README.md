@@ -24,6 +24,10 @@ Test #5 : "It should add the randomly generated number to the active player's cu
 Code: players[0].calcCurrentScore();
 Expected Outcome: /0 + the randomly generated number/
 
+Test #5.1 : "If the randomly generated number is between 2 and 6, inclusive, then it should add the number the active player's currentScore, else it resets the currentScore to 0."
+Code: players[0].calcCurrentScore();
+Expected Outcome: /if number is 1, players[0].currentScore === 0 or if the number is between 2 and 6, players[0].currentScore === that random number/
+
 Describe: Players.prototype.calcTotalScore();
 Test #6 : "It should should add the active player's current score to the active player's total score."
 Code: players[0].calcTotalScore();
