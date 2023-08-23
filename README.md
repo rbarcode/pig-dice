@@ -13,3 +13,8 @@ Describe: Game()
 Test #3 : "It should create an object with properties for players, totalScores, activePlayer, die, gameOver.
 Code: newGame;
 Expected Output: newGame {players: {}, totalScores: {}, activePlayerIndex: 0, die: undefined, gameOver: false}
+
+Describe: Game.prototype.dieRoll()
+Test #4 : "It should return a random number between 1 and 6."
+Code: game.protopype.die();
+Expected Outcome: /some random number between 1 and 6/
