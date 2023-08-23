@@ -5,7 +5,11 @@ function Player() {
 }
 
 Player.prototype.calcCurrentScore = function(currentRollValue) {
-  this.currentScore += currentRollValue;
+  if (currentRollValue === 1) {
+    this.currentScore = 0;
+  } else {
+    this.currentScore += currentRollValue;
+  }
   return this.currentScore;
 }
 
