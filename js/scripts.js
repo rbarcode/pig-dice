@@ -1,7 +1,7 @@
 function Player() {
   this.totalScore = 0;
   this.currentScore = 0;
-  this.isTurn = false;
+  this.isTurn = false; //see if we need this 
 }
 
 // Player.prototype.calcCurrentScore = function (currentRollValue) {
@@ -32,11 +32,10 @@ Game.prototype.dieRoll = function () {
   // this.activePlayer.calcCurrentScore(this.currentRollValue);
   // return this.currentRollValue;
   if (this.currentRollValue === 1) {
-    this.currentScore = 0;
+    this.activePlayer.currentScore = 0;
     this.changeTurn();
   } else {
-    currentScore += this.currentRollValue; //fix this and get it to connect to player
-  }
+    this.activePlayer.currentScore += this.currentRollValue; 
   return this.currentRollValue;
 }
 
