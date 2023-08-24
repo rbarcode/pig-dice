@@ -1,14 +1,15 @@
 //Business Logic
 //Player Constructor ------------
-function Player() {
+function Player(name) {
+  this.name = name;
   this.totalScore = 0;
   this.currentScore = 0;
 }
 
 //Game Constructor ------------
 function Game(player1, player2) {
-  this.players = [player1 = new Player(player1), player2 = new Player(player2)];
-  this.activePlayer = this.players[0];pio/"("
+  this.players = [player1, player2];
+  this.activePlayer = this.players[0];
   this.currentRollValue = 0;
   this.gameOver = false;
 }
@@ -52,3 +53,9 @@ Game.prototype.hold = function () {
 
 
  //User Interface Logic
+let player1 = new Player (name);
+let player2 = new Player (name);
+let newGame = new Game(player1, player2);
+
+
+
