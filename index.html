@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scripts.js"></script>
+  <title>Pig Dice</title>
+</head> 
+<body>
+
+  <h1>Pig Dice</h1>
+  <div id="players">
+    <form id="player-input">
+      <label for="player1-name">Player One Name: </label>
+      <input type="text" id="player1-name" required>
+      <label for="player2-name">Player Two Name: </label>
+      <input type="text" id="player2-name" required>
+      <button id="player-name-submit" type="submit">New Game</button>
+    </form>
+  </div><br>
+  <div id="game">
+      <p id="die">Die Roll Value: <span id="die-value"></span></p>
+      <p id="player1-ui">Player One: <span id="p1-name"></span></p>
+      <p id="p1current">Current Score: </p>
+      <p id="p1total">Total Score: </p>
+      <button id="player1-roll" type="button">Roll</button>
+      <button id="player1-hold" type="button">Hold</button>
+      <p id="player2-ui">Player Two: <span id="p2-name"></span></p>
+      <p id="p2current">Current Score: </p>
+      <p id="p2total">Total Score: </p>
+      <button id="player2-roll" type="button">Roll</button>
+      <button id="player2-hold" type="button">Hold</button>
+  </div>
+
+
+</body>
+</html>
